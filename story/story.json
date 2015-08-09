@@ -1,0 +1,51 @@
+{
+  "Title": "Harjot's new IoT app",
+  "Subtitle": "An app to demo make it",
+  "Objective": "This is in a way extended subtitle (200 words)",
+  "Steps": [
+    [
+      "Unbox and take out elements",
+      "img3.jpg"
+    ],
+    [
+      "I will do the next step",
+      "img1.jpg"
+    ],
+    [
+      "i will do the third step",
+      "img2.jpg"
+    ],
+    [
+      "there is a fourth step",
+      "img3.jpg"
+    ],
+    [
+      "one more step ",
+      "img4.jpg"
+    ],
+    [
+      "and last step",
+      "img5.jpg"
+    ]
+  ],
+  "Conclusion": [
+    "",
+    "img10.jpg"
+  ],
+  "Code": "var a=10;\na=i+1;\nprint i;",
+  "MobileApps": [
+    [
+      "img1.jpg"
+    ],
+    [
+      "img2.jpg"
+    ],
+    [
+      "img3.jpg"
+    ]
+  ],
+  "Category": "Grove Pi",
+  "WhatYouNeed": "Raspberry Pi, Touch Sensor",
+  "WhatItDoes" : "Turns all on or off",
+  "Dashboard": 1
+}

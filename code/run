@@ -1,0 +1,7 @@
+#!/bin/sh
+APPNAME=touchsensor
+MYHOME=/usr/share/funstore/funstore/
+cd $MYHOME/code_repository/$APPNAME/code
+#sudo ./dependencies
+
+sudo $MYHOME/code_repository/$APPNAME/code/code 

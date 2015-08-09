@@ -1,0 +1,23 @@
+#!/usr/bin/python
+
+from api import Dweet
+import time
+import grovepi
+
+# Connect the Grove Touch Sensor to analog port A0
+# SIG,NC,VCC,GND
+touch_sensor = 2
+
+# Connect the LED to digital port D4
+# SIG,NC,VCC,GND
+led = 4
+
+# Turn on LED once sensor exceeds threshold resistance
+
+grovepi.pinMode(touch_sensor,"INPUT")
+grovepi.pinMode(led,"OUTPUT")
+
+# Get sensor value
+sensor_value = grovepi.digitalRead(touch_sensor)
+Dweet("Touch", sensor_value)
+grovepi.digitalWrite(led, sensor_value)

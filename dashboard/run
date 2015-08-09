@@ -1,0 +1,21 @@
+#!/bin/bash
+API="No"
+APPNAME=touchsensor
+MYHOME=/usr/share/funstore/funstore
+MAINDASH=$MYHOME/dashboard
+APPDASH=$MYHOME/code_repository/$APPNAME/dashboard
+
+if [ "$API" == "YES" ]; then
+	cd $MAINDASH
+	length=$(sudo jq '.panes | length' dashboard.json)
+	cd $APPDASH
+	sed -i "s/api0/api_$length/g" addDashboard.json
+	sed -i "s/txtJob0/txtJob_$length/g" addDashboard.json
+	newAPI=$(cat addDashboard.json)
+	cd $MAINDASH
+	sudo jq .panes[$length]="$newAPI" dashboard.json > tmp.json
+	sudo mv tmp.json dashboard.json
+	cd $APPDASH
+else
+	sudo cp -r addDashboard.json $MAINDASH/dashboard.json	
+fi

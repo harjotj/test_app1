@@ -1,0 +1,10 @@
+#!/bin/sh
+JQ="/usr/local/bin/jq"
+
+if [ -f $JQ ];then echo ""
+    else
+       sudo pip install jq
+    fi
+
+sudo pip install dweepy
+sudo pip install pubnub
